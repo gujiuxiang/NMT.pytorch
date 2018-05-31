@@ -61,7 +61,7 @@ parser.add_argument('-supervised_fertility', type=str, default=None, help="Get f
 
 # Optimization options
 parser.add_argument('-encoder_type', default='text', help="Type of encoder to use. Options are [text|img].")
-parser.add_argument('-batch_size', type=int, default=2, help='Maximum batch size')
+parser.add_argument('-batch_size', type=int, default=64, help='Maximum batch size')
 parser.add_argument('-max_generator_batches', type=int, default=32, help="Maximum batches of words in a sequence to run the generator on in parallel. Higher is faster, but uses more memory.")
 parser.add_argument('-epochs', type=int, default=13, help='Number of training epochs')
 parser.add_argument('-start_epoch', type=int, default=1, help='The epoch from which to start')

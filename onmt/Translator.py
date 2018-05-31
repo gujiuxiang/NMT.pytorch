@@ -208,7 +208,7 @@ class Translator(object):
                     for c in range(c_attn_t.size(1)):
                         v = self.align[words[0, c].data[0]]
                         if v != onmt.Constants.PAD:
-                            out[b, v] += c_attn_t[b, c]
+                            out[b, v] = out[b, v] + c_attn_t[b, c]
                 out = out.log()
 
             word_scores = out.view(beamSize, batchSize, -1) \
